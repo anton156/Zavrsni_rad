@@ -219,7 +219,7 @@
         className: 'buttons-print',
 
         text: function (dt) {
-            return  '<i class="fa fa-print"></i> ' + dt.i18n('buttons.print', 'Print');
+            return  '<i class="fa fa-print"></i> ' + dt.i18n('buttons.print', 'Printaj');
         },
 
         action: function (e, dt, button, config) {
@@ -269,7 +269,7 @@
     if (typeof DataTable.ext.buttons.copyHtml5 !== 'undefined') {
         $.extend(DataTable.ext.buttons.copyHtml5, {
             text: function (dt) {
-                return '<i class="fa fa-copy"></i> ' + dt.i18n('buttons.copy', 'Copy');
+                return '<i class="fa fa-copy"></i> ' + dt.i18n('buttons.copy', 'Kopiraj');
             }
         });
     }
