@@ -26,7 +26,7 @@ class $MODEL_NAME$APIController extends AppBaseController
 
         $$MODEL_NAME_PLURAL_CAMEL$ = $query->get();
 
-        return $this->sendResponse($$MODEL_NAME_PLURAL_CAMEL$->toArray(), '$MODEL_NAME_PLURAL_HUMAN$ retrieved successfully');
+        return $this->sendResponse($$MODEL_NAME_PLURAL_CAMEL$->toArray(), '$MODEL_NAME_PLURAL_HUMAN$ pronađen');
     }
 
     $DOC_STORE$
@@ -37,7 +37,7 @@ class $MODEL_NAME$APIController extends AppBaseController
         /** @var $MODEL_NAME$ $$MODEL_NAME_CAMEL$ */
         $$MODEL_NAME_CAMEL$ = $MODEL_NAME$::create($input);
 
-        return $this->sendResponse($$MODEL_NAME_CAMEL$->toArray(), '$MODEL_NAME_HUMAN$ saved successfully');
+        return $this->sendResponse($$MODEL_NAME_CAMEL$->toArray(), '$MODEL_NAME_HUMAN$ spremljen');
     }
 
     $DOC_SHOW$
@@ -50,7 +50,7 @@ class $MODEL_NAME$APIController extends AppBaseController
             return $this->sendError('$MODEL_NAME_HUMAN$ not found');
         }
 
-        return $this->sendResponse($$MODEL_NAME_CAMEL$->toArray(), '$MODEL_NAME_HUMAN$ retrieved successfully');
+        return $this->sendResponse($$MODEL_NAME_CAMEL$->toArray(), '$MODEL_NAME_HUMAN$ pronađen');
     }
 
     $DOC_UPDATE$
@@ -66,7 +66,7 @@ class $MODEL_NAME$APIController extends AppBaseController
         $$MODEL_NAME_CAMEL$->fill($request->all());
         $$MODEL_NAME_CAMEL$->save();
 
-        return $this->sendResponse($$MODEL_NAME_CAMEL$->toArray(), '$MODEL_NAME$ updated successfully');
+        return $this->sendResponse($$MODEL_NAME_CAMEL$->toArray(), '$MODEL_NAME$ izmjenjen');
     }
 
     $DOC_DESTROY$
@@ -76,11 +76,11 @@ class $MODEL_NAME$APIController extends AppBaseController
         $$MODEL_NAME_CAMEL$ = $MODEL_NAME$::find($id);
 
         if (empty($$MODEL_NAME_CAMEL$)) {
-            return $this->sendError('$MODEL_NAME_HUMAN$ not found');
+            return $this->sendError('$MODEL_NAME_HUMAN$ nije pronađen');
         }
 
         $$MODEL_NAME_CAMEL$->delete();
 
-        return $this->sendSuccess('$MODEL_NAME_HUMAN$ deleted successfully');
+        return $this->sendSuccess('$MODEL_NAME_HUMAN$ izbrisan');
     }
 }
