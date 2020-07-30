@@ -40,3 +40,5 @@ Route::post(
 Route::resource('kolegijs', 'KolegijController');
 
 Route::resource('predavanjes', 'PredavanjeController');
+
+Route::resource('students', 'studentController');
